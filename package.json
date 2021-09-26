@@ -1,15 +1,18 @@
 {
-  "name": "bash-parser",
-  "version": "0.5.0",
+  "name": "@garyos/bash-parser",
+  "version": "0.5.1",
   "main": "src/index.js",
   "description": "Standard compliant bash parser",
   "repository": "vorpaljs/bash-parser",
   "license": "MIT",
   "author": "vorpal-js",
+	"publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "doc": "doctoc",
     "test": "ava && xo --ignore **/built-grammar.js",
-    "build": "mgb ./src/modes posix && mgb ./src/modes bash && mgb ./src/modes word-expansion",
+    "build": "mgb ./src/modes posix --web && mgb ./src/modes bash --web && mgb ./src/modes word-expansion --web",
     "cover-test": "nyc ava && xo --ignore **/built-grammar.js",
     "cover-publish": "nyc report --reporter=text-lcov | coveralls"
   },
@@ -18,11 +21,11 @@
     "node": ">=4"
   },
   "devDependencies": {
+    "@garyos/mode-grammar-builder": "^0.6.2",
     "ava": "^0.15.2",
     "coveralls": "^2.11.11",
     "doctoc": "^1.2.0",
     "json5": "^0.5.0",
-    "mode-grammar-builder": "^0.6.0",
     "nyc": "^7.0.0",
     "xo": "^0.16.0"
   },
