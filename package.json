@@ -1,9 +1,9 @@
 {
   "name": "@garyos/bash-parser",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "main": "src/index.js",
-  "description": "Standard compliant bash parser",
-  "repository": "vorpaljs/bash-parser",
+  "description": "Fork: Standard compliant bash parser",
+  "repository": "gary-ascuy/bash-parser",
   "license": "MIT",
   "author": "vorpal-js",
 	"publishConfig": {
